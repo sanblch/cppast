@@ -15,7 +15,7 @@
 #include <cppast/cpp_type.hpp>
 #include <cppast/visitor.hpp>
 
-#include "example_parser.hpp"
+#include "example_parser_2.hpp"
 
 // whether or not a type is a C string, i.e. char pointer
 bool is_c_string(const cppast::cpp_type& type)

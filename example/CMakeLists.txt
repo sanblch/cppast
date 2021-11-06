@@ -3,8 +3,11 @@
 # found in the top-level directory of this distribution.
 
 function(_cppast_example name)
-    add_executable(cppast_example_${name} ${name}.cpp example_parser.hpp)
-    target_link_libraries(cppast_example_${name} PUBLIC cppast)
+    set(target cppast_example_${name})
+    add_executable(${target} ${name}.cpp example_parser.hpp)
+    target_link_libraries(${target} PUBLIC cppast)
+    install(TARGETS ${target} EXPORT cppastTargets
+      RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
 endfunction()
 
 _cppast_example(ast_printer)
