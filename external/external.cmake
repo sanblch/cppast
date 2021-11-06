@@ -232,4 +232,5 @@ target_link_libraries(_cppast_libclang INTERFACE ${LIBCLANG_LIBRARY})
 target_include_directories(_cppast_libclang INTERFACE ${LIBCLANG_INCLUDE_DIR})
 target_compile_definitions(_cppast_libclang INTERFACE
                            CPPAST_CLANG_BINARY="${CLANG_BINARY}"
-                           CPPAST_CLANG_VERSION_STRING="${LLVM_VERSION}")
+                           CPPAST_CLANG_VERSION_STRING="${LLVM_VERSION}"
+                           CPPAST_LIBCLANG_INCLUDE_DIR="${LIBCLANG_INCLUDE_DIR}")

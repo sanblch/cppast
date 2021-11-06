@@ -85,6 +85,7 @@ libclang_compile_config::libclang_compile_config()
 {
     // set given clang binary
     set_clang_binary(CPPAST_CLANG_BINARY);
+    do_add_include_dir(CPPAST_LIBCLANG_INCLUDE_DIR);
 
     // set macros to detect cppast
     define_macro("__cppast__", "libclang");
